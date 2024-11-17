@@ -1,0 +1,60 @@
+
+# Configuração do Menu de Spawn - Lobby
+# Este arquivo define os itens e ações para o menu principal no lobby do servidor.
+
+name: '&8Lobby'  # Nome do menu
+size: 9  # Tamanho do menu (quantidade de slots)
+
+items:
+  # Botão 1: Kit Inicial
+  btn-0:
+    slot: 0  # Posição no menu
+    item:
+      material: DIAMOND  # Material do item
+      amount: 2  # Quantidade
+      name: '&aKit Inicial'  # Nome personalizado
+      glow: true  # Efeito de brilho
+    commands:
+      - '/kit inicial'  # Comando executado ao clicar
+
+  # Botão 2: Função adicional (placeholder)
+  btn-3:
+    slot: 3
+    item:
+      material: IRON_SWORD  # Material atualizado
+      name: '&bFerramenta Especial'
+      lore:  # Descrição adicional do item
+        - '&7Uma ferramenta mágica'
+        - '&7Pronta para uso.'
+
+  # Botão 3: Item especial
+  btn-4:
+    slot: 4
+    item:
+      material: ENCHANTED_GOLDEN_APPLE
+      name: '&6Maçã Dourada Encantada'
+      lore:
+        - '&eUm presente raro.'
+
+  # Botão 4: Teleporte para o Spawn
+  btn-7:
+    slot: 7
+    item:
+      material: RECOVERY_COMPASS
+      name: '&dTeleportar para o Spawn'
+      glow: true
+    commands:
+      - '/spawn'  # Comando de teleporte
+    messages:  # Mensagem exibida ao clicar
+      - '&aTeleportando para o Spawn...'
+
+  # Botão 5: Fechar Menu
+  btn-8:
+    slot: 8
+    item:
+      material: BARRIER
+      name: '&cFechar Menu'
+    commands:
+      - '/menu close'  # Comando para fechar o menu
+    messages:
+      - '&cMenu fechado!'
